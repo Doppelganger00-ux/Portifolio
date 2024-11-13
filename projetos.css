@@ -1,0 +1,187 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #100e33, #12074d);
+    color: #eaeaea;
+    margin: 0;
+    transition: background 0.5s;
+}
+
+/* Cabeçalho */
+header {
+    font-family: "Playfair Display", serif;
+    background: rgba(34, 23, 66, 0.9);
+    padding: 10px;
+    color: #f5f5f5;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    background-color: rgba(30, 20, 60, 1);
+}
+
+header h1 {
+    font-size: 4em;
+    color: #ffcc80;
+    transition: transform 0.3s;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 30px;
+    transition: transform 0.3s;
+}
+
+header nav ul li:hover {
+    transform: translateY(-5px);
+}
+
+header nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc80;
+}
+
+header nav ul li a i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+/* Estilos da seção de projetos */
+#projetos {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(46, 0, 97, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#projetos:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+#projetos h2 {
+    color: #ffcc80;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Grid para disposição dos projetos */
+.projeto-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.projeto {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.projeto:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projeto h3 {
+    color: #ffcc80;
+    margin-bottom: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.projeto h3:hover {
+    color: #af8f65;
+    transform: scale(1.05);
+}
+
+.imagem-capa {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.projeto p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.projeto a {
+    color: #ffcc80;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.projeto a:hover {
+    color: #f5f5f5;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(30, 20, 60, 0.9);
+    color: #f5f5f5;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-item {
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    color: #ffcc80;
+}
+
+.footer-item i {
+    margin-right: 8px;
+    font-size: 2em;
+}
+
+.footer-item a {
+    color: #ffcc80;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-item a:hover {
+    color: #af5bf7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projeto-container {
+        grid-template-columns: 1fr;
+    }
+}

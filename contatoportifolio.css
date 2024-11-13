@@ -1,0 +1,327 @@
+/* Estrutura básica */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #100e33, #12074d);
+    color: #eaeaea;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cabeçalho */
+header {
+    font-family: "Playfair Display", serif;
+    background: rgba(34, 23, 66, 0.9);
+    padding: 10px;
+    color: #f5f5f5;
+    text-align: center;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+header:hover {
+    background-color: rgba(30, 20, 60, 1);
+}
+
+header h1 {
+    font-size: 4em;
+    color: #ffcc80;
+    transition: transform 0.3s;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap; /* Flex wrap permite que os itens do menu quebrem para a próxima linha em telas menores */
+}
+
+header nav ul li {
+    margin: 0 30px;
+    transition: transform 0.3s;
+}
+
+header nav ul li:hover {
+    transform: translateY(-5px);
+}
+
+header nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc80;
+}
+
+header nav ul li a i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+/* Contato */
+#contato {
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(46, 0, 97, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contato:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Título com Ícone */
+.titulo-contato {
+    text-align: center;
+    color: #ffcc80;
+}
+
+.titulo-contato i {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Grupo de Formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative; /* Necessário para posicionar o ícone dentro do campo */
+}
+
+label {
+    color: #ffcc80;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+input, textarea {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Espaço à direita para o ícone */
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #333;
+    color: #eaeaea;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffcc80;
+    box-shadow: 0 0 5px rgba(255, 204, 128, 0.5);
+}
+
+/* Ajuste de altura para textarea */
+textarea {
+    height: 40px;
+    resize: none;
+}
+
+/* Ícone no final do campo */
+.form-icon {
+    position: absolute;
+    right: 15px; /* Ajusta o espaço do ícone à direita */
+    top: 67%; /* Aumenta o valor para baixar o ícone */
+    transform: translateY(-50%);
+    color: #ffcc80;
+    font-size: 1.2em;
+    pointer-events: none; /* Ícone não interfere na interação do usuário com o campo */
+}
+
+/* Botão Enviar */
+button {
+    background-color: #af5bf7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 60%;
+    max-width: 300px;
+    margin: 20px auto 0;
+}
+
+button:hover {
+    background-color: #ffcc80;
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(30, 20, 60, 0.9);
+    color: #f5f5f5;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-item {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    color: #ffcc80;
+}
+
+.footer-item i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.footer-item a {
+    color: #ffcc80;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-item a:hover {
+    color: #af5bf7;
+}
+
+/* Media Queries para responsividade */
+
+/* Até 1024px (desktops menores e tablets grandes) */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    header nav ul li {
+        margin: 0 15px;
+    }
+
+    #contato {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    button {
+        width: 70%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        margin: 10px 0;
+    }
+}
+
+/* Até 768px (tablets) */
+@media (max-width: 770px) {
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #contato {
+        max-width: 90%;
+        padding: 30px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        margin: 10px 0;
+    }
+}
+
+/* Até 480px (celulares) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #contato {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        margin: 10px 0;
+    }
+}

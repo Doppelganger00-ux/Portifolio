@@ -1,0 +1,192 @@
+/* Estrutura básica */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #100e33, #12074d);
+    color: #eaeaea;
+    margin: 0;
+    transition: background 0.5s;
+}
+
+/* Cabeçalho */
+header {
+    font-family: "Playfair Display", serif;
+    background: rgba(34, 23, 66, 0.9);
+    padding: 10px;
+    color: #f5f5f5;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    background-color: rgba(30, 20, 60, 1);
+}
+
+header h1 {
+    font-size: 3.9em;
+    color: #ffcc80;
+    transition: transform 0.3s;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 30px;
+    transition: transform 0.3s;
+}
+
+header nav ul li:hover {
+    transform: translateY(-5px);
+}
+
+header nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc80;
+}
+
+/* Ajuste nos itens do menu */
+header nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+/* Estilo para os ícones */
+header nav ul li a i {
+    font-size: 1.5em; /* Aumenta o tamanho do ícone */
+    margin-bottom: 5px; /* Espaço entre o ícone e o texto */
+}
+
+/* Alinha o texto e o ícone centralizados */
+header nav ul li a span {
+    margin-top: 5px; /* Espaço entre o ícone e o texto */
+}
+
+/* Sobre Mim */
+#sobre-mim {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(46, 0, 97, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#sobre-mim:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.sobre-mim-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.texto-sobre-mim {
+    font-size: 1.1em;
+    color: #d1d1d1;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 30px;
+    text-align: justify;
+
+}
+
+.texto-sobre-mim h2 {
+    text-align: center;
+    color: #ffcc80;
+    font-size: 2em;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.texto-sobre-mim h2:hover {
+    color: #af5bf7;
+}
+
+
+/* Informações Adicionais */
+.informacoes-adicionais {
+    text-align: justify;
+    margin-top: 30px;
+}
+
+.informacoes-adicionais h3 {
+    color: #af5bf7;
+    font-size: 1.8em;
+    margin-bottom: 20px; /* Aumentando o espaço abaixo do título */
+    transition: transform 0.3s;
+}
+
+.informacoes-adicionais h3:hover {
+    transform: scale(1.05);
+}
+
+.informacoes-adicionais p,
+.informacoes-adicionais ul {
+    font-size: 1.1em;
+    color: #d1d1d1;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Aumentando o espaço entre os parágrafos e as listas */
+    list-style-type: circle;
+}
+
+.informacoes-adicionais ul {
+    padding-left: 20px;
+    transition: padding-left 0.3s;
+}
+
+.informacoes-adicionais ul:hover {
+    padding-left: 30px;
+}
+
+/* Para os itens de lista (li), se quiser mais espaçamento entre eles */
+.informacoes-adicionais ul li {
+    margin-bottom: 20px; /* Aumentando o espaço entre os itens da lista */
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para telas menores que 480px (celulares) */
+    header h1 {
+        font-size: 2.2em;
+    }
+}
+  /* Ocultar o player de vídeo, mantendo o áudio */
+  #video-player {
+    width: 0;
+    height: 0;
+    border: none;
+}
